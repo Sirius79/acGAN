@@ -80,4 +80,5 @@ if opt.n == 3:
   optimizerD2 = optim.Adam(DCD2.parameters(), lr=opt.lr)
   optimizerD3 = optim.Adam(DCD3.parameters(), lr=opt.lr)
 
-loss_d, loss_g = train(DCG, [DCD1, DCD2, DCD3], optimizerG, [optimizerD1, optimizerD2, optimizerD3], dataloader, criterion, N, T_max, 5)
+loss_d, loss_g = train(DCG, [DCD1, DCD2, DCD3], optimizerG, [optimizerD1, optimizerD2, optimizerD3],\
+                       dataloader, criterion, z, N, T_max, 5)
